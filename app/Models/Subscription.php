@@ -15,7 +15,7 @@ class Subscription extends Model
       * @var array<int, string>
       */
      protected $fillable = [
-        'email' => 'unique:subscriptions'
+        'email'
      ];
 
 
