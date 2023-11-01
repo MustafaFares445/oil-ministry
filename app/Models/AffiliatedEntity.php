@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Affiliated_entity extends Model
+class AffiliatedEntity extends Model
 {
     use HasFactory;
 
