@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ContactRequest extends FormRequest
 {
@@ -25,7 +26,7 @@ class ContactRequest extends FormRequest
             'phone' => ['required' , 'regex:/[0-9]{10}/|digits:10'],
             'email' => ['required' , 'email'],
             'location' => ['required' , 'string'],
-            'lang' => ['required']
+            'lang' => ['required' , Rule::in(['en' , 'ar'])]
         ];
     }
 }
