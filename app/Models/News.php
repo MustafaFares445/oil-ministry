@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static create(mixed $validated)
+ */
 class News extends Model
 {
     use HasFactory;
@@ -15,7 +18,7 @@ class News extends Model
       * @var array<int, string>
       */
      protected $fillable = [
-        'img',
+        'image',
         'content',
         'lang'
      ];
