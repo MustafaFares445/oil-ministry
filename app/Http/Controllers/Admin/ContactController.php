@@ -32,7 +32,7 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ContactRequest $request)
+    public function store(ContactRequest $request): \Illuminate\Http\RedirectResponse
     {
         Contact::create($request->validated());
 
@@ -50,7 +50,7 @@ class ContactController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(ContactRequest $request, Contact $contact)
+    public function update(ContactRequest $request, Contact $contact): \Illuminate\Http\RedirectResponse
     {
         $contact->update($request->validated());
 
@@ -60,7 +60,7 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Contact $contact)
+    public function destroy(Contact $contact): \Illuminate\Http\RedirectResponse
     {
         $contact->delete();
 
