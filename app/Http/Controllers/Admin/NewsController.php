@@ -10,7 +10,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class newsController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
