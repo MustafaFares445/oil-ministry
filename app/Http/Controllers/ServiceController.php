@@ -12,7 +12,7 @@ class ServiceController extends Controller
      */
     public function index(): \Illuminate\Http\JsonResponse
     {
-        $services =Service::all();
+        $services =Service::all()->makeHidden(['created_at' , 'updated_at']);
 
         return $this->successResponse(data: $services);
     }
