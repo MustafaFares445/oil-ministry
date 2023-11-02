@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('setAppLang')->prefix('{locale}')->group(function (){
+    Route::apiResource('service' , \App\Http\Controllers\ServiceController::class);
+});
+
