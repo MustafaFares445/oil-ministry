@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->string('img');
+            $table->longText('title');
             $table->longText('content');
             $table->enum('lang' , ['ar' , 'en'])->default('ar');
             $table->timestamps();

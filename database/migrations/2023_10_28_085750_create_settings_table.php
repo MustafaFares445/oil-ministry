@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('header_image');
             $table->string('header_big');
             $table->string('header_small');
-            $table->string('about');
+            $table->longText('about');
             $table->enum('lang' , ['ar' , 'en'])->default('ar');
             $table->timestamps();
         });
