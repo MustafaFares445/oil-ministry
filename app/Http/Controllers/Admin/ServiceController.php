@@ -11,6 +11,8 @@ use Illuminate\Contracts\View\View;
 
 class ServiceController extends Controller
 {
+    private string $path = "admin.pages.";
+
     /**
      * Display a listing of the resource.
      */
@@ -18,7 +20,7 @@ class ServiceController extends Controller
     {
         $services = Service::all();
 
-        return view('service.index.blade' , compact('services'));
+        return view($this->path.'services.index' , compact('services'));
     }
 
     /**
@@ -26,7 +28,7 @@ class ServiceController extends Controller
      */
     public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('service.create.blade');
+        return view($this->path . 'services.create');
     }
 
     /**
@@ -36,7 +38,7 @@ class ServiceController extends Controller
     {
         Service::create($request->validated());
 
-        return redirect()->route('service.create');
+        return redirect()->route($this->path . 'services.create');
     }
 
     /**
@@ -44,7 +46,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('service.show.blade');
+        return view($this->path . 'services.show');
     }
 
     /**
@@ -52,7 +54,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('service.edit.blade');
+        return view($this->path . 'services.edit' , compact('service'));
     }
 
     /**
@@ -62,7 +64,7 @@ class ServiceController extends Controller
     {
         $service->update($request->validated());
 
-        return redirect()->route('service.index');
+        return redirect()->route($this->path . 'services.index');
     }
 
     /**
@@ -72,6 +74,6 @@ class ServiceController extends Controller
     {
         $service->delete();
 
-        return redirect()->route('service.index');
+        return redirect()->route($this->path . 'services.index');
     }
 }

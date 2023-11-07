@@ -16,9 +16,9 @@ class AffiliatedEntityController extends Controller
      */
     public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        $affiliated_entities = AffiliatedEntity::all();
+        $affiliatedEntities = AffiliatedEntity::all();
 
-        return view('AffiliatedEntity.index.blade' , compact('affiliated_entities'));
+        return view('admin.pages.AffiliatedEntities.index' , compact('affiliatedEntities'));
     }
 
     /**
@@ -26,7 +26,7 @@ class AffiliatedEntityController extends Controller
      */
     public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('AffiliatedEntity.create.blade');
+        return view('admin.pages.AffiliatedEntities.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class AffiliatedEntityController extends Controller
     {
         AffiliatedEntity::create($request->validated());
 
-        return redirect()->route('AffiliatedEntity.index');
+        return redirect()->route('affiliated-entities.index');
     }
 
     /**
@@ -44,7 +44,7 @@ class AffiliatedEntityController extends Controller
      */
     public function show(AffiliatedEntity $affiliatedEntity): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('AffiliatedEntity.show');
+        return view('affiliated-entities.index');
     }
 
     /**
@@ -52,7 +52,7 @@ class AffiliatedEntityController extends Controller
      */
     public function edit(AffiliatedEntity $affiliatedEntity): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('AffiliatedEntity.edit' , compact('affiliatedEntity'));
+        return view('admin.pages.AffiliatedEntities.edit' , compact('affiliatedEntity'));
     }
 
     /**
@@ -60,9 +60,11 @@ class AffiliatedEntityController extends Controller
      */
     public function update(AffiliatedEntityRequest $request, AffiliatedEntity $affiliatedEntity): \Illuminate\Http\RedirectResponse
     {
+
         $affiliatedEntity->update($request->validated());
 
-       return redirect()->route('AffiliatedEntity.index');
+
+       return redirect()->route('affiliated-entities.index');
     }
 
     /**
@@ -72,6 +74,6 @@ class AffiliatedEntityController extends Controller
     {
         $affiliatedEntity->delete();
 
-        return redirect()->route('AffiliatedEntity.index');
+        return redirect()->route('affiliated-entities.index');
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AffiliatedEntityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ Route::get('/', function () {
 });
 
 
-Route::middleware('setAppLang')->prefix('{locale}')->group(function (){
-
-});
+//Route::middleware('setAppLang')->prefix('{locale}')->group(function (){
+    Route::resource('/affiliated-entities' , AffiliatedEntityController::class)->names('affiliated-entities');
+    Route::resource('/services' , \App\Http\Controllers\Admin\ServiceController::class)->names('services');
+//});

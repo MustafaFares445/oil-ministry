@@ -1,0 +1,231 @@
+
+/* Variables */
+:root{
+    /* --main-color:#e8ed4d; */
+    --main-color:red;
+    /* --transparent-color:rgb(15 116 143 / 70%); */
+    --section-padding:100px;
+    --gray-light:#777;
+   }
+   .Basic{
+    display: flex;
+    }
+   /*start Global Rules */
+   *{
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       padding: 0;
+       margin: 0;
+       text-transform: capitalize;
+       text-decoration: none !important;
+   }
+   html{
+       scroll-behavior: smooth;
+   }
+   body{
+    font-family: "Nunito",sans-serif;
+       /* font-family: "Open Sans", sans-serif; */
+   }
+   /* ul{
+       list-style: none;
+   } */
+   .container{
+       padding-left: 15px;
+       padding-right: 15px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   /* small */
+   @media(min-width: 768px){
+       .container{
+           width: 750px;
+       }
+   }
+   /* Medium */
+   @media(min-width: 992px){
+       .container{
+           width: 970px;
+       }
+   }
+   /* Large */
+   @media(min-width: 1200px){
+       .container{
+           width: 1170px;
+       }
+   }
+   /*End Global Rules */
+
+
+    /* Start Header  */
+    .header{
+       width: 100%;
+       position: absolute;
+       z-index: 2;
+       left: 0;
+   }
+   /* .header .container{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       position: relative;
+       min-height: 97px;
+   } */
+
+   .title
+   {
+   background-color: rgba(250, 128, 114, 0.842);
+   margin-top: 3rem;
+
+   }
+   .Headtitle{
+       text-align: center;
+   }
+   .Recipe , .Recipe2, .Recipe3
+   {
+       background-color: #fff2004a;
+       width: 40rem;
+       height: 19rem;
+       margin-top: 8rem;
+       margin-left: 24rem;
+       border-radius: 15px;
+   }
+   .Recipe2
+   {
+       background-color: #febdc3b3 ;
+   }
+   .Recipe3
+   {
+       background-color: #ffae62a2 ;
+   }
+
+   .NumRecip
+   {
+       color:white;
+       margin: 2rem 0rem 0rem 5px;
+
+   }
+   .HeadRecip
+   {
+   color: darkgoldenrod;
+   }
+   .imgRecip
+   {
+       margin: 52px 0px 0px 70px;
+       border-radius: 181px 0px 170px 0px;
+       width: 19rem;
+       height: 11rem;
+   }
+
+
+
+   /*                    TABLE SECTION               */
+
+   .TableTop
+   {
+       width: 300px;
+       margin-left: 10px;
+       margin-right: 10px;
+
+   }
+   .TablePhoto
+   {   display: flex;
+       width: 100%;
+       height: 200px;
+       margin-bottom: 15px;
+       position: relative;
+       cursor: pointer;
+
+   }
+   .img1
+   {
+       width: 19rem;
+       height: 13rem;
+
+   }
+
+   .TablePhoto:hover .image-overlay
+   {
+       opacity: 1;
+   }
+   .image-overlay
+    {
+           opacity: 0;
+           background-color: rgb(243 171 171 / 59%);
+           position: absolute;
+           width: 19rem;
+           height: 13rem;
+           padding: 9px;
+           transition: all 0.4s ease-in-out;
+   }
+
+   .image-overlay-border
+   {
+           border: 2px solid white;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           color: #fff;
+           letter-spacing: 2px;
+           font-size: 18px;
+   }
+
+   .TableReservation
+   {
+           margin-top: 22rem;
+           width: 54rem;
+           height: 50rem;
+           background-color: #f8f6eeb8;
+           border-radius: 4px;
+   }
+   .TableReservImage
+   {
+           height: 34rem;
+           padding: 9px;
+           border-radius: 4px;
+   }
+   .allowed-submit{opacity: .5;cursor: not-allowed;}
+   .valid-input{
+     border:1px solid green !important;
+   }
+   .invalid-input{
+     border:1px solid red !important;
+   }
+   .invalid-msg{
+     color: red;
+   }
+   .validation-form h3{
+   background:#eae9e9;
+   text-align:center;
+   padding:5px 0px;
+   }
+   .validation-form{
+   border:1px solid orange;
+   width:22rem;
+
+
+background:#dad9d9;
+   padding:6px 4px;
+   }
+   .validation-form .form-group{
+   margin:15px 0px;
+   }
+   .validation-form .form-group input{
+   padding:10px;
+   width:94%;
+   box-sizing:border-box;
+     border:none;
+     border-bottom:1px solid orange;
+   }
+   .validation-form .form-group input:focus{
+   outline:unset;
+   }
+   .validation-form .form-group input[type="submit"]{
+   width:100%;
+
+   background:orange;
+   font-size:20px;
+   color:white;
+   }

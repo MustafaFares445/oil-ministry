@@ -1,0 +1,143 @@
+/* Variables */
+:root{
+    --main-color:goldenrod;
+    /* --transparent-color:rgb(15 116 143 / 70%); */
+    --section-padding:100px;
+    --gray-light:#777;
+   }
+   
+   /*start Global Rules */
+   *{
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       padding: 0;
+       margin: 0;
+       text-transform: capitalize;
+   }
+   html{
+       scroll-behavior: smooth;
+   }
+   body{
+       font-family: "Open Sans", sans-serif;
+       /* font-family: 'Patrick Hand', cursive; */
+   }
+   ul{
+       list-style: none;
+   }
+   .container{
+       padding-left: 15px;
+       padding-right: 15px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
+
+
+/* a:hover{
+    color: var(--main-color);
+} */
+
+.sidebar{
+  background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)) ,url('../images/blog-02.jpg');
+}
+.main-panel .navbar{
+    /* background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); */
+
+    /* background:  linear-gradient(to right, #BF953F, #FCF6BA, #FBF5B7,#BF953F);
+    border-bottom: 1px solid rgb(176 139 17 / 24%) !important;
+    */
+}
+.log_out_dropdown{
+    display: flex !important;
+}
+.pe-7s-power{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: black;
+}
+.main-panel > .footer{
+    /* background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); */
+
+    /* border-top: 1px solid rgb(176 139 17 / 24%) !important; */
+    /* background:  linear-gradient(to right, #BF953F, #FCF6BA, #FBF5B7,#BF953F); */
+   
+}
+
+.main-panel .content{
+    /* background-color: black; */
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) ,url('../images/blog-02.jpg');
+
+    position: relative;
+    background-size: cover;
+}
+
+.container_fluid_image_top_left{
+    background-image: url(../images/t-l.png);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    left: 0;
+    top: 0;
+}
+.container_fluid_image_bottom_left{
+    background-image: url(../images/b-l.png);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    left: 0;
+    bottom: 0;
+}
+.container_fluid_image_bottom_right{
+    background-image: url(../images/b-r.png);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+}
+.container_fluid_image_top_right{
+    background-image: url(../images/t-r.png);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    right: 0;
+    top: 0;
+}
+
+
+.resturant_logo{
+    color: var(--main-color);
+}
+.resturant_logo:hover{
+    color: #777;
+}
+.container-fluid .pull-left{
+    color: black;
+}
+.dashboard_color{
+    color: black;
+}
+.dashboard_color:hover{
+    color: var(--main-color) !important;
+}
+.caret:hover{
+    color: var(--main-color) !important;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    color: var(--main-color) !important;
+}
+/* .navbar .navbar-nav > li > a:hover{
+    color: var(--main-color);
+} */
+.navbar-default .navbar-nav > .dropdown > a:hover .caret, .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-bottom-color: var(--main-color);
+    border-top-color: var(--main-color);
+}

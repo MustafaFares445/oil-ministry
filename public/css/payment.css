@@ -1,0 +1,391 @@
+
+.payment_container {
+  background-color: #ffffff;
+  display: flex;
+  width: 460px;
+  height: 120px;
+  position: relative;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.payment_container:hover {
+  transform: scale(1.03);
+  width: 220px;
+}
+
+.payment_container:hover .payment_left-side {
+  width: 100%;
+}
+
+.payment_left_side_syriatel {
+  background-color: red;
+  width: 130px;
+  height: 120px;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.payment_left_side_mtn {
+    background-color: goldenrod;
+    width: 130px;
+    height: 120px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+.payment_right_side {
+  width: calc(100% - 130px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.payment_right_side:hover {
+  background-color: #f9f7f9;
+}
+
+.payment_arrow {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.payment_new {
+  font-size: 23px;
+  font-family: "Lexend Deca", sans-serif;
+  margin-left: 20px;
+}
+
+.payment_card {
+  width: 70px;
+  height: 46px;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -moz-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+}
+
+.payment_card_line_syriatel {
+  width: 65px;
+  height: 13px;
+  background-color: red;
+  border-radius: 2px;
+  margin-top: 7px;
+}
+.payment_card_line_mtn {
+    width: 65px;
+    height: 13px;
+    background-color: goldenrod;
+    border-radius: 2px;
+    margin-top: 7px;
+  }
+
+@media only screen and (max-width: 480px) {
+  .payment_container {
+    transform: scale(0.7);
+  }
+
+  .payment_container:hover {
+    transform: scale(0.74);
+  }
+
+  .payment_new {
+    font-size: 18px;
+  }
+}
+
+.payment_buttons_syriatel {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  box-shadow: 0 -10px 0 0 #961e17, 0 10px 0 0 #bb5333;
+  border-radius: 50%;
+  margin-top: 5px;
+  transform: rotate(90deg);
+  margin: 10px 0 0 -30px;
+}
+.payment_buttons_mtn{
+    width: 8px;
+    height: 8px;
+    background-color: goldenrod;
+    box-shadow: 0 -10px 0 0 #966617, 0 10px 0 0 #bbad33;
+    border-radius: 50%;
+    margin-top: 5px;
+    transform: rotate(90deg);
+    margin: 10px 0 0 -30px;
+  }
+
+.payment_container:hover .payment_card {
+  animation: slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+}
+
+.payment_container:hover .payment_post {
+  animation: slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(-70px) rotate(90deg);
+    transform: translateY(-70px) rotate(90deg);
+  }
+
+  60% {
+    -webkit-transform: translateY(-70px) rotate(90deg);
+    transform: translateY(-70px) rotate(90deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px) rotate(90deg);
+    transform: translateY(-8px) rotate(90deg);
+  }
+}
+
+.payment_post {
+  width: 63px;
+  height: 75px;
+  background-color: #dddde0;
+  position: absolute;
+  z-index: 11;
+  bottom: 10px;
+  top: 120px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.payment_post_line {
+  width: 47px;
+  height: 9px;
+  background-color: #545354;
+  position: absolute;
+  border-radius: 0px 0px 3px 3px;
+  right: 8px;
+  top: 8px;
+}
+
+.payment_post_line:before {
+  content: "";
+  position: absolute;
+  width: 47px;
+  height: 9px;
+  background-color: #757375;
+  top: -8px;
+}
+
+.payment_screen {
+  width: 47px;
+  height: 23px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 22px;
+  right: 8px;
+  border-radius: 3px;
+}
+
+.payment_numbers {
+  width: 12px;
+  height: 12px;
+  background-color: #838183;
+  box-shadow: 0 -18px 0 0 #838183, 0 18px 0 0 #838183;
+  border-radius: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  left: 25px;
+  top: 52px;
+}
+
+.payment_numbers_line2 {
+  width: 12px;
+  height: 12px;
+  background-color: #aaa9ab;
+  box-shadow: 0 -18px 0 0 #aaa9ab, 0 18px 0 0 #aaa9ab;
+  border-radius: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  left: 25px;
+  top: 68px;
+}
+
+@keyframes slide-post {
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+  }
+}
+
+.payment_dollar_syriatel{
+  position: absolute;
+  font-size: 16px;
+  font-family: "Lexend Deca", sans-serif;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: red;
+  text-align: center;
+}
+.payment_dollar_mtn{
+    position: absolute;
+    font-size: 16px;
+    font-family: "Lexend Deca", sans-serif;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: goldenrod;
+    text-align: center;
+  }
+
+.payment_container:hover .dollar {
+  animation: fade-in-fwd 0.3s 1s backwards;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mtn_container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************** cash*****************/
+.cash_container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+.card_cash {
+    --primary-clr: #1C204B;
+    --dot-clr: #BBC0FF;
+    --play: hsl(195, 74%, 62%);
+    width: 200px;
+    height: 170px;
+    border-radius: 10px;
+   }
+
+   .card_cash {
+    font-family: "Arial";
+    color: #fff;
+    display: grid;
+    cursor: pointer;
+    grid-template-rows: 50px 1fr;
+   }
+
+   .card_cash:hover .img_section {
+    transform: translateY(1em);
+   }
+
+   .card_cash_desc {
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    top: -10px;
+    display: grid;
+    gap: 10px;
+    background: var(--primary-clr);
+   }
+
+   .card_cash_time {
+    font-size: 1.7em;
+    font-weight: 500;
+   }
+
+   .img_section {
+    transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: hsl(195, 74%, 62%);
+   }
+
+   .card_cash_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+   }
+
+   .card_cash_title {
+    flex: 1;
+    font-size: 0.9em;
+    font-weight: 500;
+   }
+
+   .card_cash_menu {
+    display: flex;
+    gap: 4px;
+    margin-inline: auto;
+   }
+
+   .card_cash svg {
+    float: right;
+    max-width: 100%;
+    max-height: 100%;
+   }
+
+   .card_cash .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--dot-clr);
+   }
+
+   .card_cash .recent {
+    line-height: 0;
+    font-size: 0.8em;
+   }
