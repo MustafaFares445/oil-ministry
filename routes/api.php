@@ -19,12 +19,25 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('setAppLang')->prefix('{locale}')->group(function () {
-    Route::apiResource('service', \App\Http\Controllers\ServiceController::class);
-    Route::apiResource('affiliatedEntity', \App\Http\Controllers\AffiliatedEntityController::class);
-    Route::apiResource('contact', \App\Http\Controllers\ContactController::class);
-    Route::apiResource('link', \App\Http\Controllers\LinkController::class);
-    Route::apiResource('news', \App\Http\Controllers\NewsController::class);
-    Route::apiResource('project', \App\Http\Controllers\ProjectController::class);
-    Route::apiResource('setting', \App\Http\Controllers\SettingController::class);
-    Route::apiResource('welcome', \App\Http\Controllers\WelcomeController::class);
+    Route::get('service' , [\App\Http\Controllers\ServiceController::class , 'index']);
+    Route::get('affiliatedEntity', [\App\Http\Controllers\AffiliatedEntityController::class , 'index']);
+    Route::get('link', [\App\Http\Controllers\LinkController::class , 'index']);
+    Route::get('news', [\App\Http\Controllers\NewsController::class , 'index']);
+    Route::get('project', [\App\Http\Controllers\ProjectController::class , 'index']);
+    Route::get('setting', [\App\Http\Controllers\SettingController::class , 'index']);
+    Route::get('welcome', [\App\Http\Controllers\WelcomeController::class , 'index']);
+    Route::get('contact', [\App\Http\Controllers\ContactController::class , 'index']);
 });
+
+
+Route::get('service/{service}' , [\App\Http\Controllers\ServiceController::class , 'show']);
+Route::get('affiliatedEntity/{affiliatedEntity}', [\App\Http\Controllers\AffiliatedEntityController::class , 'show']);
+
+Route::get('link/{link}', [\App\Http\Controllers\LinkController::class , 'show']);
+Route::get('news/{news}', [\App\Http\Controllers\NewsController::class , 'show']);
+Route::get('project/{project}', [\App\Http\Controllers\ProjectController::class , 'show']);
+Route::get('setting/{setting}', [\App\Http\Controllers\SettingController::class , 'show']);
+Route::get('welcome/{welcome}', [\App\Http\Controllers\WelcomeController::class , 'show']);
+
+
+
