@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Scopes\WhereLangScope;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,6 +20,9 @@ class User extends Model
         'email',
         'password'
      ];
-
+     protected static function booted()
+     {
+         static::addGlobalScope(new WhereLangScope);
+     }
 
 }
