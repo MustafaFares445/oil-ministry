@@ -22,7 +22,7 @@ class WelcomeSeeder extends Seeder
             'person' => 'وزارة البترول والثروة المعدنية
             المهندس بسام رضوان طعمة',
             'industry' => 'وزير البترول والثروة المعدنية',
-            'img' => '',
+            'img' => '/minister.svg',
             'lang' => 'ar',
         ]);
     }

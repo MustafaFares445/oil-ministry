@@ -13,6 +13,6 @@ class WhereLangScope implements Scope
      */
     public function apply(Builder $builder, Model $model): void
     {
-        $builder->where('lang' , request()->segment(2));
+      //  $builder->where('lang' , request()->segment(2));
     }
 }

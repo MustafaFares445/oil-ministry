@@ -6,25 +6,26 @@ use App\Models\Service;
 use App\Traits\ApiResponse;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 
 class ServiceController extends Controller
 {
-    use ApiResponse;
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResponse
+    public function index()
     {
-        $services =Service::paginate(5)->makeHidden(['created_at', 'updated_at']);
-        return $this->successResponse(data: $services);
+        $services =Service::where('lang' , App::getLocale())->get()->makeHidden(['created_at', 'updated_at']);
+        return $this->successResponse(data: $services , message: 'success');
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Service $service): JsonResponse
+    public function show(Service $service)
     {
-        return $this->successResponse(data: $service);
+        return $this->successResponse(data: $service , message: 'success');
     }
+
 }
